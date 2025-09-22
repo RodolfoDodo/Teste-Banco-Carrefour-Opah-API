@@ -1,0 +1,39 @@
+name: Java CI with Maven
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+permissions:
+  contents: read
+  security-events: write
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up JDK 17
+        uses: actions/setup-java@v4
+        with:
+          java-version: '17'
+          distribution: 'temurin'
+          cache: maven
+
+      - name: Run tests and build
+        run: mvn clean verify --file pom.xml
+
+      - name: Upload test report
+        if: always()  # garante que o relatório seja enviado mesmo se os testes falharem
+        uses: actions/upload-artifact@v4
+        with:
+          name: test-report
+          path: target/surefire-reports  # diretório padrão dos relatórios de teste do Maven
+
+      - name: Update dependency graph
+        uses: advanced-security/maven-dependency-submission-action@v3

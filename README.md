@@ -1,12 +1,12 @@
-##🏦 Teste Banco Carrefour - API REST
+## 🏦 Teste Banco Carrefour - API REST
 
 API desenvolvida como parte de um desafio técnico para o Banco Carrefour, utilizando Java, RestAssured e práticas de automação de testes REST.
 
-##📌 Objetivo
+## 📌 Objetivo
 
 Criar e testar endpoints RESTful relacionados à gestão de usuários, simulando um ambiente de autenticação, cadastro, listagem, atualização e exclusão de dados.
 
-##🚀 Tecnologias Utilizadas
+## 🚀 Tecnologias Utilizadas
 
 Java 11+
 
@@ -20,7 +20,7 @@ JSON
 
 IntelliJ IDEA (recomendado)
 
-##🧪 Testes Automatizados
+## 🧪 Testes Automatizados
 
 Todos os testes são realizados contra a API pública Serverest ,com os seguintes casos de uso:
 
@@ -56,22 +56,21 @@ Deleta esse usuário.
 
 Valida se o retorno contém a mensagem "Registro excluído com sucesso".
 
-##🛠️ Como Executar os Testes
+## 🛠️ Como Executar os Testes
 
 Clone o repositório:
 
 git clone https://github.com/RodolfoDodo/Teste-Banco-Carrefour-Opah-API.git
 cd Teste-Banco-Carrefour-Opah-API
 
-
-##Execute os testes com Maven:
+## Execute os testes com Maven:
 
 mvn clean test
 
 
 Certifique-se de que o Maven e o JDK estão corretamente instalados em sua máquina.
 
-##🗂️ Requisitos
+## 🗂️ Requisitos
 
 Java 11 ou superior
 
@@ -79,16 +78,15 @@ Maven instalado
 
 Acesso à internet (a API Serverest é online)
 
-##📃 Observações
+## 📃 Observações
 
-Os testes dependem de uma API externa pública (https://serverest.dev
-).
+Os testes dependem de uma API externa pública (https://serverest.dev).
 
 O e-mail dos usuários é gerado dinamicamente com base em System.currentTimeMillis() para evitar duplicações.
 
 O token de autenticação é obtido via POST /login e usado em todos os testes subsequentes.
 
-##👤 Autor
+## 👤 Autor
 
 Rodolfo Dodo
 

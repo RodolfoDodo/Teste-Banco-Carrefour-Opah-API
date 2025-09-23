@@ -42,4 +42,6 @@ jobs:
           path: allure-results
 
       - name: Update dependency graph
+        if: always()
+        continue-on-error: true
         uses: advanced-security/maven-dependency-submission-action@v3
